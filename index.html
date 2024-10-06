@@ -1,0 +1,933 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>learniverse-exciting world of knowledge</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>learniverse-exciting world of knowledge</h1>
+    </header>
+    <main>
+        <div id="education-levels">
+            <div class="education-level">
+                <h2><a href="#" onclick="showGrades('kg-to-5th')">KG to 5th Grade</a></h2>
+            </div>
+            <div class="education-level">
+                <h2><a href="#" onclick="showGrades('6th-to-12th')">6th to 12th Grade</a></h2>
+            </div>
+            <div id="you-are-special" class="education-level">
+                <h2><a href="#" onclick="showSpecialSection()">You Are Special</a></h2>
+            </div>
+            <!-- Add the new Design Thinking section -->
+            <div class="education-level">
+                <h2><a href="#" onclick="showDesignThinkingSection()">Design Thinking</a></h2>
+            </div>
+        </div>
+
+        <div id="kg-to-5th" class="grade-list" style="display: none;">
+            <h2>KG to 5th Grade Standards</h2>
+            <ul>
+                <li><a href="#" onclick="showSyllabus('kg')">Kindergarten</a></li>
+                <li><a href="#" onclick="showSyllabus('1st')">1st Grade</a></li>
+                <li><a href="#" onclick="showSyllabus('2nd')">2nd Grade</a></li>
+                <li><a href="#" onclick="showSyllabus('3rd')">3rd Grade</a></li>
+                <li><a href="#" onclick="showSyllabus('4th')">4th Grade</a></li>
+                <li><a href="#" onclick="showSyllabus('5th')">5th Grade</a></li>
+            </ul>
+            <button onclick="showGrades('education-levels')">Back</button>
+        </div>
+
+        <div id="6th-to-12th" class="grade-list" style="display: none;">
+            <h2>6th to 12th Grade Standards</h2>
+            <ul>
+                <li><a href="#" onclick="showSyllabus('6th')">6th Grade</a></li>
+                <li><a href="#" onclick="showSyllabus('7th')">7th Grade</a></li>
+                <li><a href="#" onclick="showSyllabus('8th')">8th Grade</a></li>
+                <li><a href="#" onclick="showSyllabus('9th')">9th Grade</a></li>
+                <li><a href="#" onclick="showSyllabus('10th')">10th Grade</a></li>
+                <li><a href="#" onclick="showSyllabus('11th')">11th Grade</a></li>
+                <li><a href="#" onclick="showSyllabus('12th')">12th Grade</a></li>
+            </ul>
+            <button onclick="showGrades('education-levels')">Back</button>
+        </div>
+
+        <!-- Syllabus content for each grade -->
+        <div id="kg" class="syllabus" style="display: none;">
+            <h2>Kindergarten Syllabus</h2>
+            <ul>
+                <li>
+                    <span onclick="showAskButton('kg', 'Alphabets')">Alphabets</span>
+                    <button class="ask-button" style="display: none;" onclick="showQuestionInput('kg', 'Alphabets')">Ask</button>
+                </li>
+                <li>
+                    <span onclick="showAskButton('kg', 'Words')">Words</span>
+                    <button class="ask-button" style="display: none;" onclick="showQuestionInput('kg', 'Words')">Ask</button>
+                </li>
+                <li>
+                    <span onclick="showAskButton('kg', 'Rhymes')">Rhymes</span>
+                    <button class="ask-button" style="display: none;" onclick="showQuestionInput('kg', 'Rhymes')">Ask</button>
+                </li>
+                <li>
+                    <span onclick="showAskButton('kg', 'Numbers')">Numbers</span>
+                    <button class="ask-button" style="display: none;" onclick="showQuestionInput('kg', 'Numbers')">Ask</button>
+                </li>
+            </ul>
+            <div id="kg-question-section" style="display: none;">
+                <input type="text" id="kg-question-input" placeholder="Ask your question here">
+                <button onclick="askMickey('kg')">Ask Mickey</button>
+            </div>
+            <div id="kg-answer" class="mickey-answer" style="display: none;"></div>
+            <button onclick="showGrades('kg-to-5th')">Back</button>
+        </div>
+
+        <div id="1st" class="syllabus" style="display: none;">
+            <h2>1st Grade Syllabus</h2>
+            <ul>
+                <li>
+                    <span onclick="showAskButton('1st', 'Basic Reading')">Basic Reading</span>
+                    <button class="ask-button" style="display: none;" onclick="showQuestionInput('1st', 'Basic Reading')">Ask</button>
+                </li>
+                <li>
+                    <span onclick="showAskButton('1st', 'Writing Skills')">Writing Skills</span>
+                    <button class="ask-button" style="display: none;" onclick="showQuestionInput('1st', 'Writing Skills')">Ask</button>
+                </li>
+                <li>
+                    <span onclick="showAskButton('1st', 'Basic Math')">Basic Math</span>
+                    <button class="ask-button" style="display: none;" onclick="showQuestionInput('1st', 'Basic Math')">Ask</button>
+                </li>
+                <li>
+                    <span onclick="showAskButton('1st', 'Science Introduction')">Science Introduction</span>
+                    <button class="ask-button" style="display: none;" onclick="showQuestionInput('1st', 'Science Introduction')">Ask</button>
+                </li>
+            </ul>
+            <div id="1st-question-section" style="display: none;">
+                <input type="text" id="1st-question-input" placeholder="Ask your question here">
+                <button onclick="askMickey('1st')">Ask Mickey</button>
+            </div>
+            <div id="1st-answer" class="mickey-answer" style="display: none;"></div>
+            <button onclick="showGrades('kg-to-5th')">Back</button>
+        </div>
+
+        <div id="2nd" class="syllabus" style="display: none;">
+            <h2>2nd Grade Syllabus</h2>
+            <ul>
+                <li>
+                    <span onclick="showAskButton('2nd', 'Reading Comprehension')">Reading Comprehension</span>
+                    <button class="ask-button" style="display: none;" onclick="showQuestionInput('2nd', 'Reading Comprehension')">Ask</button>
+                </li>
+                <li>
+                    <span onclick="showAskButton('2nd', 'Basic Grammar')">Basic Grammar</span>
+                    <button class="ask-button" style="display: none;" onclick="showQuestionInput('2nd', 'Basic Grammar')">Ask</button>
+                </li>
+                <li>
+                    <span onclick="showAskButton('2nd', 'Addition and Subtraction')">Addition and Subtraction</span>
+                    <button class="ask-button" style="display: none;" onclick="showQuestionInput('2nd', 'Addition and Subtraction')">Ask</button>
+                </li>
+                <li>
+                    <span onclick="showAskButton('2nd', 'Plant and Animal Life Cycles')">Plant and Animal Life Cycles</span>
+                    <button class="ask-button" style="display: none;" onclick="showQuestionInput('2nd', 'Plant and Animal Life Cycles')">Ask</button>
+                </li>
+            </ul>
+            <div id="2nd-question-section" style="display: none;">
+                <input type="text" id="2nd-question-input" placeholder="Ask your question here">
+                <button onclick="askMickey('2nd')">Ask Mickey</button>
+            </div>
+            <div id="2nd-answer" class="mickey-answer" style="display: none;"></div>
+            <button onclick="showGrades('kg-to-5th')">Back</button>
+        </div>
+
+        <div id="3rd" class="syllabus" style="display: none;">
+            <h2>3rd Grade Syllabus</h2>
+            <ul>
+                <li>
+                    <span onclick="showAskButton('3rd', 'Creative Writing')">Creative Writing</span>
+                    <button class="ask-button" style="display: none;" onclick="showQuestionInput('3rd', 'Creative Writing')">Ask</button>
+                </li>
+                <li>
+                    <span onclick="showAskButton('3rd', 'Multiplication and Division')">Multiplication and Division</span>
+                    <button class="ask-button" style="display: none;" onclick="showQuestionInput('3rd', 'Multiplication and Division')">Ask</button>
+                </li>
+                <li>
+                    <span onclick="showAskButton('3rd', 'States of Matter')">States of Matter</span>
+                    <button class="ask-button" style="display: none;" onclick="showQuestionInput('3rd', 'States of Matter')">Ask</button>
+                </li>
+                <li>
+                    <span onclick="showAskButton('3rd', 'Local History')">Local History</span>
+                    <button class="ask-button" style="display: none;" onclick="showQuestionInput('3rd', 'Local History')">Ask</button>
+                </li>
+            </ul>
+            <div id="3rd-question-section" style="display: none;">
+                <input type="text" id="3rd-question-input" placeholder="Ask your question here">
+                <button onclick="askMickey('3rd')">Ask Mickey</button>
+            </div>
+            <div id="3rd-answer" class="mickey-answer" style="display: none;"></div>
+            <button onclick="showGrades('kg-to-5th')">Back</button>
+        </div>
+
+        <div id="4th" class="syllabus" style="display: none;">
+            <h2>4th Grade Syllabus</h2>
+            <ul>
+                <li>
+                    <span onclick="showAskButton('4th', 'Advanced Grammar')">Advanced Grammar</span>
+                    <button class="ask-button" style="display: none;" onclick="showQuestionInput('4th', 'Advanced Grammar')">Ask</button>
+                </li>
+                <li>
+                    <span onclick="showAskButton('4th', 'Fractions Introduction')">Fractions Introduction</span>
+                    <button class="ask-button" style="display: none;" onclick="showQuestionInput('4th', 'Fractions Introduction')">Ask</button>
+                </li>
+                <li>
+                    <span onclick="showAskButton('4th', 'Electricity and Magnetism')">Electricity and Magnetism</span>
+                    <button class="ask-button" style="display: none;" onclick="showQuestionInput('4th', 'Electricity and Magnetism')">Ask</button>
+                </li>
+                <li>
+                    <span onclick="showAskButton('4th', 'Geography')">Geography</span>
+                    <button class="ask-button" style="display: none;" onclick="showQuestionInput('4th', 'Geography')">Ask</button>
+                </li>
+            </ul>
+            <div id="4th-question-section" style="display: none;">
+                <input type="text" id="4th-question-input" placeholder="Ask your question here">
+                <button onclick="askMickey('4th')">Ask Mickey</button>
+            </div>
+            <div id="4th-answer" class="mickey-answer" style="display: none;"></div>
+            <button onclick="showGrades('kg-to-5th')">Back</button>
+        </div>
+
+        <div id="5th" class="syllabus" style="display: none;">
+            <h2>5th Grade Syllabus</h2>
+            <ul>
+                <li>
+                    <span onclick="showAskButton('5th', 'Advanced Reading Comprehension')">Advanced Reading Comprehension</span>
+                    <button class="ask-button" style="display: none;" onclick="showQuestionInput('5th', 'Advanced Reading Comprehension')">Ask</button>
+                </li>
+                <li>
+                    <span onclick="showAskButton('5th', 'Essay Writing')">Essay Writing</span>
+                    <button class="ask-button" style="display: none;" onclick="showQuestionInput('5th', 'Essay Writing')">Ask</button>
+                </li>
+                <li>
+                    <span onclick="showAskButton('5th', 'Fractions and Decimals')">Fractions and Decimals</span>
+                    <button class="ask-button" style="display: none;" onclick="showQuestionInput('5th', 'Fractions and Decimals')">Ask</button>
+                </li>
+                <li>
+                    <span onclick="showAskButton('5th', 'Earth Sciences')">Earth Sciences</span>
+                    <button class="ask-button" style="display: none;" onclick="showQuestionInput('5th', 'Earth Sciences')">Ask</button>
+                </li>
+            </ul>
+            <div id="5th-question-section" style="display: none;">
+                <input type="text" id="5th-question-input" placeholder="Ask your question here">
+                <button onclick="askMickey('5th')">Ask Mickey</button>
+            </div>
+            <div id="5th-answer" class="mickey-answer" style="display: none;"></div>
+            <button onclick="showGrades('kg-to-5th')">Back</button>
+        </div>
+
+        <div id="6th" class="syllabus" style="display: none;">
+            <h2>6th Grade Syllabus</h2>
+            <ul>
+                <li>
+                    <span onclick="showAskButton('6th', 'Narrative Writing')">Narrative Writing</span>
+                    <button class="ask-button" style="display: none;" onclick="showQuestionInput('6th', 'Narrative Writing')">Ask</button>
+                </li>
+                <li>
+                    <span onclick="showAskButton('6th', 'Pre-Algebra')">Pre-Algebra</span>
+                    <button class="ask-button" style="display: none;" onclick="showQuestionInput('6th', 'Pre-Algebra')">Ask</button>
+                </li>
+                <li>
+                    <span onclick="showAskButton('6th', 'Earth\'s Systems')">Earth's Systems</span>
+                    <button class="ask-button" style="display: none;" onclick="showQuestionInput('6th', 'Earth\'s Systems')">Ask</button>
+                </li>
+                <li>
+                    <span onclick="showAskButton('6th', 'Ancient Civilizations')">Ancient Civilizations</span>
+                    <button class="ask-button" style="display: none;" onclick="showQuestionInput('6th', 'Ancient Civilizations')">Ask</button>
+                </li>
+            </ul>
+            <div id="6th-question-section" style="display: none;">
+                <input type="text" id="6th-question-input" placeholder="Ask your question here">
+                <button onclick="askMickey('6th')">Ask Mickey</button>
+            </div>
+            <div id="6th-answer" class="mickey-answer" style="display: none;"></div>
+            <button onclick="showGrades('6th-to-12th')">Back</button>
+        </div>
+
+        <div id="7th" class="syllabus" style="display: none;">
+            <h2>7th Grade Syllabus</h2>
+            <ul>
+                <li>
+                    <span onclick="showAskButton('7th', 'Literary Analysis')">Literary Analysis</span>
+                    <button class="ask-button" style="display: none;" onclick="showQuestionInput('7th', 'Literary Analysis')">Ask</button>
+                </li>
+                <li>
+                    <span onclick="showAskButton('7th', 'Algebra Basics')">Algebra Basics</span>
+                    <button class="ask-button" style="display: none;" onclick="showQuestionInput('7th', 'Algebra Basics')">Ask</button>
+                </li>
+                <li>
+                    <span onclick="showAskButton('7th', 'Cell Biology')">Cell Biology</span>
+                    <button class="ask-button" style="display: none;" onclick="showQuestionInput('7th', 'Cell Biology')">Ask</button>
+                </li>
+                <li>
+                    <span onclick="showAskButton('7th', 'World Geography')">World Geography</span>
+                    <button class="ask-button" style="display: none;" onclick="showQuestionInput('7th', 'World Geography')">Ask</button>
+                </li>
+            </ul>
+            <div id="7th-question-section" style="display: none;">
+                <input type="text" id="7th-question-input" placeholder="Ask your question here">
+                <button onclick="askMickey('7th')">Ask Mickey</button>
+            </div>
+            <div id="7th-answer" class="mickey-answer" style="display: none;"></div>
+            <button onclick="showGrades('6th-to-12th')">Back</button>
+        </div>
+
+        <div id="8th" class="syllabus" style="display: none;">
+            <h2>8th Grade Syllabus</h2>
+            <ul>
+                <li>
+                    <span onclick="showAskButton('8th', 'Persuasive Writing')">Persuasive Writing</span>
+                    <button class="ask-button" style="display: none;" onclick="showQuestionInput('8th', 'Persuasive Writing')">Ask</button>
+                </li>
+                <li>
+                    <span onclick="showAskButton('8th', 'Geometry Introduction')">Geometry Introduction</span>
+                    <button class="ask-button" style="display: none;" onclick="showQuestionInput('8th', 'Geometry Introduction')">Ask</button>
+                </li>
+                <li>
+                    <span onclick="showAskButton('8th', 'Chemistry Basics')">Chemistry Basics</span>
+                    <button class="ask-button" style="display: none;" onclick="showQuestionInput('8th', 'Chemistry Basics')">Ask</button>
+                </li>
+                <li>
+                    <span onclick="showAskButton('8th', 'U.S. History')">U.S. History</span>
+                    <button class="ask-button" style="display: none;" onclick="showQuestionInput('8th', 'U.S. History')">Ask</button>
+                </li>
+            </ul>
+            <div id="8th-question-section" style="display: none;">
+                <input type="text" id="8th-question-input" placeholder="Ask your question here">
+                <button onclick="askMickey('8th')">Ask Mickey</button>
+            </div>
+            <div id="8th-answer" class="mickey-answer" style="display: none;"></div>
+            <button onclick="showGrades('6th-to-12th')">Back</button>
+        </div>
+
+        <div id="9th" class="syllabus" style="display: none;">
+            <h2>9th Grade Syllabus</h2>
+            <ul>
+                <li>
+                    <span onclick="showAskButton('9th', 'Literature Analysis')">Literature Analysis</span>
+                    <button class="ask-button" style="display: none;" onclick="showQuestionInput('9th', 'Literature Analysis')">Ask</button>
+                </li>
+                <li>
+                    <span onclick="showAskButton('9th', 'Algebra')">Algebra</span>
+                    <button class="ask-button" style="display: none;" onclick="showQuestionInput('9th', 'Algebra')">Ask</button>
+                </li>
+                <li>
+                    <span onclick="showAskButton('9th', 'Biology')">Biology</span>
+                    <button class="ask-button" style="display: none;" onclick="showQuestionInput('9th', 'Biology')">Ask</button>
+                </li>
+                <li>
+                    <span onclick="showAskButton('9th', 'World History')">World History</span>
+                    <button class="ask-button" style="display: none;" onclick="showQuestionInput('9th', 'World History')">Ask</button>
+                </li>
+            </ul>
+            <div id="9th-question-section" style="display: none;">
+                <input type="text" id="9th-question-input" placeholder="Ask your question here">
+                <button onclick="askMickey('9th')">Ask Mickey</button>
+            </div>
+            <div id="9th-answer" class="mickey-answer" style="display: none;"></div>
+            <button onclick="showGrades('6th-to-12th')">Back</button>
+        </div>
+
+        <div id="10th" class="syllabus" style="display: none;">
+            <h2>10th Grade Syllabus</h2>
+            <ul>
+                <li>
+                    <span onclick="showAskButton('10th', 'World Literature')">World Literature</span>
+                    <button class="ask-button" style="display: none;" onclick="showQuestionInput('10th', 'World Literature')">Ask</button>
+                </li>
+                <li>
+                    <span onclick="showAskButton('10th', 'Geometry and Trigonometry')">Geometry and Trigonometry</span>
+                    <button class="ask-button" style="display: none;" onclick="showQuestionInput('10th', 'Geometry and Trigonometry')">Ask</button>
+                </li>
+                <li>
+                    <span onclick="showAskButton('10th', 'Chemistry')">Chemistry</span>
+                    <button class="ask-button" style="display: none;" onclick="showQuestionInput('10th', 'Chemistry')">Ask</button>
+                </li>
+                <li>
+                    <span onclick="showAskButton('10th', 'World History')">World History</span>
+                    <button class="ask-button" style="display: none;" onclick="showQuestionInput('10th', 'World History')">Ask</button>
+                </li>
+            </ul>
+            <div id="10th-question-section" style="display: none;">
+                <input type="text" id="10th-question-input" placeholder="Ask your question here">
+                <button onclick="askMickey('10th')">Ask Mickey</button>
+            </div>
+            <div id="10th-answer" class="mickey-answer" style="display: none;"></div>
+            <button onclick="showGrades('6th-to-12th')">Back</button>
+        </div>
+
+        <div id="11th" class="syllabus" style="display: none;">
+            <h2>11th Grade Syllabus</h2>
+            <ul>
+                <li>
+                    <span onclick="showAskButton('11th', 'American Literature')">American Literature</span>
+                    <button class="ask-button" style="display: none;" onclick="showQuestionInput('11th', 'American Literature')">Ask</button>
+                </li>
+                <li>
+                    <span onclick="showAskButton('11th', 'Pre-Calculus')">Pre-Calculus</span>
+                    <button class="ask-button" style="display: none;" onclick="showQuestionInput('11th', 'Pre-Calculus')">Ask</button>
+                </li>
+                <li>
+                    <span onclick="showAskButton('11th', 'Physics')">Physics</span>
+                    <button class="ask-button" style="display: none;" onclick="showQuestionInput('11th', 'Physics')">Ask</button>
+                </li>
+                <li>
+                    <span onclick="showAskButton('11th', 'U.S. Government and Politics')">U.S. Government and Politics</span>
+                    <button class="ask-button" style="display: none;" onclick="showQuestionInput('11th', 'U.S. Government and Politics')">Ask</button>
+                </li>
+            </ul>
+            <div id="11th-question-section" style="display: none;">
+                <input type="text" id="11th-question-input" placeholder="Ask your question here">
+                <button onclick="askMickey('11th')">Ask Mickey</button>
+            </div>
+            <div id="11th-answer" class="mickey-answer" style="display: none;"></div>
+            <button onclick="showGrades('6th-to-12th')">Back</button>
+        </div>
+
+        <div id="12th" class="syllabus" style="display: none;">
+            <h2>12th Grade Syllabus</h2>
+            <ul>
+                <li>
+                    <span onclick="showAskButton('12th', 'Advanced Literature')">Advanced Literature</span>
+                    <button class="ask-button" style="display: none;" onclick="showQuestionInput('12th', 'Advanced Literature')">Ask</button>
+                </li>
+                <li>
+                    <span onclick="showAskButton('12th', 'Calculus')">Calculus</span>
+                    <button class="ask-button" style="display: none;" onclick="showQuestionInput('12th', 'Calculus')">Ask</button>
+                </li>
+                <li>
+                    <span onclick="showAskButton('12th', 'Physics')">Physics</span>
+                    <button class="ask-button" style="display: none;" onclick="showQuestionInput('12th', 'Physics')">Ask</button>
+                </li>
+                <li>
+                    <span onclick="showAskButton('12th', 'Economics')">Economics</span>
+                    <button class="ask-button" style="display: none;" onclick="showQuestionInput('12th', 'Economics')">Ask</button>
+                </li>
+            </ul>
+            <div id="12th-question-section" style="display: none;">
+                <input type="text" id="12th-question-input" placeholder="Ask your question here">
+                <button onclick="askMickey('12th')">Ask Mickey</button>
+            </div>
+            <div id="12th-answer" class="mickey-answer" style="display: none;"></div>
+            <button onclick="showGrades('6th-to-12th')">Back</button>
+        </div>
+
+        <!-- Add this new section just before the closing </main> tag -->
+        <div id="contact-us" class="contact-form">
+            <h2>Contact Us</h2>
+            <form id="contact-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2023 learniverse-exciting world of knowledge. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function showGrades(sectionId) {
+            hideAllSections();
+            document.getElementById(sectionId).style.display = 'block';
+        }
+
+        function showSyllabus(gradeId) {
+            hideAllSections();
+            document.getElementById(gradeId).style.display = 'block';
+        }
+
+        function hideAllSections() {
+            const sections = [
+                'education-levels', 'kg-to-5th', '6th-to-12th',
+                'kg', '1st', '2nd', '3rd', '4th', '5th',
+                '6th', '7th', '8th', '9th', '10th', '11th', '12th',
+                'special-section', 'inspire-section', 'design-thinking-section',
+                'interactive-workshop-section', 'virtual-maker-spaces-section'
+            ];
+            sections.forEach(section => {
+                const element = document.getElementById(section);
+                if (element) {
+                    element.style.display = 'none';
+                }
+            });
+        }
+
+        function showAskButton(gradeId, topic) {
+            const syllabus = document.getElementById(gradeId);
+            const askButtons = syllabus.getElementsByClassName('ask-button');
+            for (let button of askButtons) {
+                button.style.display = 'none';
+            }
+            event.target.nextElementSibling.style.display = 'inline-block';
+        }
+
+        function showQuestionInput(gradeId, topic) {
+            const questionSection = document.getElementById(`${gradeId}-question-section`);
+            questionSection.style.display = 'block';
+            questionSection.dataset.topic = topic;
+        }
+
+        function askMickey(gradeId) {
+            const questionInput = document.getElementById(`${gradeId}-question-input`);
+            const answerDiv = document.getElementById(`${gradeId}-answer`);
+            const question = questionInput.value.trim();
+            const topic = document.getElementById(`${gradeId}-question-section`).dataset.topic;
+
+            if (question) {
+                const answer = getMickeyMouseAnswer(question, gradeId, topic);
+                answerDiv.innerHTML = `
+                    <img src="logo.jpg" alt="Mickey Mouse" class="mickey-image">
+                    <p>${answer}</p>
+                `;
+                answerDiv.style.display = 'block';
+                questionInput.value = ''; // Clear the input after asking
+            }
+        }
+
+        function getTopicSpecificStory(gradeId, topic) {
+            // Add more specific stories based on grade and topic
+            const stories = {
+                kg: {
+                    Alphabets: "We went on an adventure through the Alphabet Forest, where each tree was shaped like a letter!",
+                    Words: "We discovered a treasure chest filled with magical words that came to life when we read them!",
+                    Rhymes: "We met a jolly old owl who taught us funny rhymes that made us giggle all day long!",
+                    Numbers: "We counted stars in the night sky and realized there were as many stars as there are numbers!"
+                },
+                "1st": {
+                    "Basic Reading": "We explored a magical library where books could talk and tell their own stories!",
+                    "Writing Skills": "We found a enchanted pen that could bring our imagination to life on paper!",
+                    "Basic Math": "We joined a group of friendly number monsters who taught us how to add and subtract!",
+                    "Science Introduction": "We shrunk down to the size of atoms and explored the tiny world around us!"
+                },
+                "2nd": {
+                    "Reading Comprehension": "We dove into a magical book and experienced the story firsthand!",
+                    "Basic Grammar": "We met talking punctuation marks who taught us how to structure sentences!",
+                    "Addition and Subtraction": "We played with number blocks that magically combined and separated!",
+                    "Plant and Animal Life Cycles": "We watched a time-lapse garden grow and animals transform before our eyes!"
+                },
+                "3rd": {
+                    "Creative Writing": "We used enchanted quills that brought our stories to life as we wrote them!",
+                    "Multiplication and Division": "We organized a carnival where we grouped and shared prizes in fun ways!",
+                    "States of Matter": "We visited a laboratory where we could transform matter with the wave of a wand!",
+                    "Local History": "We traveled back in time in a magical time machine to see our town's past!"
+                },
+                "4th": {
+                    "Advanced Grammar": "We played a game of 'Grammar Quidditch' where we caught flying words and arranged them into perfect sentences!",
+                    "Fractions Introduction": "We baked magical pies that could split into any fraction we wanted!",
+                    "Electricity and Magnetism": "We became tiny electrons and zoomed through giant circuits!",
+                    "Geography": "We flew on a magic carpet, exploring different landscapes and cultures around the world!"
+                },
+                "5th": {
+                    "Advanced Reading Comprehension": "We entered storybooks and helped characters solve their problems!",
+                    "Essay Writing": "We used a magical typewriter that turned our thoughts into beautifully structured essays!",
+                    "Fractions and Decimals": "We shrunk down to the size of fractions and decimals and explored their world!",
+                    "Earth Sciences": "We took a fantastic voyage to the center of the Earth and back!"
+                },
+                "6th": {
+                    "Narrative Writing": "We met storytelling genies who taught us how to weave captivating tales!",
+                    "Pre-Algebra": "We solved puzzles in an enchanted castle where each room was a different algebraic challenge!",
+                    "Earth's Systems": "We became weather wizards and learned to control the elements!",
+                    "Ancient Civilizations": "We time-traveled to ancient worlds and lived among historical figures!"
+                },
+                "7th": {
+                    "Literary Analysis": "We joined a detective agency that solved mysteries hidden in famous books!",
+                    "Algebra Basics": "We played in a mathematical playground where see-saws balanced equations!",
+                    "Cell Biology": "We shrunk down to the size of cells and explored the microscopic city inside living things!",
+                    "World Geography": "We went on a magical treasure hunt that took us to every continent!"
+                },
+                "8th": {
+                    "Persuasive Writing": "We attended a school for young wizards learning the art of magical persuasion!",
+                    "Geometry Introduction": "We explored a world made entirely of geometric shapes and learned their secrets!",
+                    "Chemistry Basics": "We mixed potions in a wizard's laboratory and learned about chemical reactions!",
+                    "U.S. History": "We rode a time-traveling roller coaster through key moments in American history!"
+                },
+                "9th": {
+                    "Literature Analysis": "We joined a book club with characters from classic novels!",
+                    "Algebra": "We solved algebraic equations to unlock doors in a mysterious mansion!",
+                    "Biology": "We went on a safari through different ecosystems, studying the circle of life!",
+                    "World History": "We played a giant board game where each space was a different era in world history!"
+                },
+                "10th": {
+                    "World Literature": "We attended an intergalactic literature festival with stories from across the universe!",
+                    "Geometry and Trigonometry": "We designed and built magical structures using geometric principles!",
+                    "Chemistry": "We became atomic chefs, cooking up new elements in a cosmic kitchen!",
+                    "World History": "We collected historical artifacts on a time-traveling scavenger hunt!"
+                },
+                "11th": {
+                    "American Literature": "We road-tripped across America, meeting famous authors and their characters!",
+                    "Pre-Calculus": "We rode mathematical waves and learned to predict their patterns!",
+                    "Physics": "We became superheroes and learned how to use the laws of physics for our powers!",
+                    "U.S. Government and Politics": "We ran for office in a magical election and learned about the political process!"
+                },
+                "12th": {
+                    "Advanced Literature": "We joined a council of literary critics from different dimensions!",
+                    "Calculus": "We piloted spaceships using calculus to navigate through asteroid fields!",
+                    "Advanced Physics": "We built our own particle accelerators to explore the quantum realm!",
+                    "Economics": "We managed our own magical marketplace in a thriving fantasy economy!"
+                }
+            };
+
+            return stories[gradeId] && stories[gradeId][topic] 
+                ? stories[gradeId][topic] 
+                : "And that's how we learned all about it!";
+        }
+
+        function getMickeyMouseAnswer(question, gradeId, topic) {
+            const gradeNames = {
+                "1st": "1st grade",
+                "2nd": "2nd grade",
+                "3rd": "3rd grade",
+                "4th": "4th grade",
+                "5th": "5th grade",
+                "6th": "6th grade",
+                "7th": "7th grade",
+                "8th": "8th grade",
+                "9th": "9th grade",
+                "10th": "10th grade",
+                "11th": "11th grade",
+                "12th": "12th grade"
+            };
+
+            const gradeName = gradeNames[gradeId] || gradeId;
+            return `Oh boy! That's a great question about ${topic} in ${gradeName}! *chuckles* Well, let me tell you a story... Once upon a time, in the magical world of learning, there was a curious student just like you who wanted to know all about ${topic}. ${getTopicSpecificStory(gradeId, topic)}`;
+        }
+
+        function showSpecialSection() {
+            hideAllSections();
+            const specialSection = document.createElement('div');
+            specialSection.id = 'special-section';
+            specialSection.innerHTML = `
+                <h2>You Are Special
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+
+                    
+                    
+                !</h2>
+                <p>Every student is unique and has their own special talents and abilities. Let's get to know you better!</p>
+                <div id="name-input-section">
+                    <input type="text" id="user-name-input" placeholder="Enter your name">
+                    <button onclick="submitName()">Submit</button>
+                </div>
+                <div id="mickey-greeting" style="display: none;">
+                    <img src="logo.jpg" alt="Mickey Mouse" class="mickey-image">
+                    <p id="greeting-text"></p>
+                </div>
+                <div id="special-question-section" style="display: none;">
+                    <button onclick="askSpecialQuestion()">Ask Mickey a Special Question</button>
+                    <div id="question-input-area" style="display: none;">
+                        <input type="text" id="special-question-input" placeholder="Ask Mickey about what makes you special">
+                        <button onclick="getSpecialAnswer()">Get Answer</button>
+                    </div>
+                </div>
+                <div id="special-answer" class="mickey-answer" style="display: none;"></div>
+                <button onclick="showGrades('education-levels')">Back to Home</button>
+            `;
+            document.querySelector('main').appendChild(specialSection);
+            document.getElementById('special-section').style.display = 'block';
+        }
+
+        function submitName() {
+            const nameInput = document.getElementById('user-name-input');
+            const name = nameInput.value.trim();
+            if (name) {
+                const greetingDiv = document.getElementById('mickey-greeting');
+                const greetingText = document.getElementById('greeting-text');
+                greetingDiv.style.display = 'block';
+                greetingText.textContent = `Hey, ${name}! It's great to meet you! You're aspecial one!`;
+                document.getElementById('name-input-section').style.display = 'none';
+                document.getElementById('special-question-section').style.display = 'block';
+            } else {
+                alert("Aw, don't be shy! Please enter your name so we can be friends!");
+            }
+        }
+
+        function askSpecialQuestion() {
+            document.getElementById('question-input-area').style.display = 'block';
+        }
+
+        function getSpecialAnswer() {
+            const questionInput = document.getElementById('special-question-input');
+            const answerDiv = document.getElementById('special-answer');
+            const question = questionInput.value.trim();
+
+            if (question) {
+                const answer = getMickeySpecialAnswer(question);
+                answerDiv.innerHTML = `
+                    <img src="logo.jpg" alt="Mickey Mouse" class="mickey-image">
+                    <p>${answer}</p>
+                `;
+                answerDiv.style.display = 'block';
+                questionInput.value = ''; // Clear the input after asking
+            } else {
+                alert("Oh boy! Don't forget to ask your question!");
+            }
+        }
+
+        function getMickeySpecialAnswer(question) {
+            const specialAnswers = [
+                "Gosh, what makes you special is your incredible curiosity! Keep asking great questions like that!",
+                "Oh boy! Your uniqueness shines through in the way you think about things. That's super special!",
+                "Ha-ha! You know what's really special about you? Your amazing ability to learn and grow every day!",
+                "Wow! The way you approach challenges with such enthusiasm is what makes you extra special!",
+                "Gee whiz! Your creativity and imagination are off the charts. That's what makes you one-of-a-kind!"
+            ];
+            return specialAnswers[Math.floor(Math.random() * specialAnswers.length)];
+        }
+
+        function showDesignThinkingSection() {
+            hideAllSections();
+            const designThinkingSection = document.createElement('div');
+            designThinkingSection.id = 'design-thinking-section';
+            designThinkingSection.innerHTML = `
+                <h2>Design Thinking</h2>
+                <p>Explore the world of design thinking and its applications!</p>
+                <div class="design-thinking-subsection">
+                    <h3><a href="#" onclick="showInspireSection()">Inspire Innovate Implement</a></h3>
+                    <p>Discover how to turn your ideas into reality through inspiration, innovation, and implementation.</p>
+                </div>
+                <div class="design-thinking-subsection">
+                    <h3><a href="#" onclick="showInteractiveWorkshop()">Interactive Workshop</a></h3>
+                    <p>Participate in hands-on workshops to learn and apply design thinking principles.</p>
+                </div>
+                <div class="design-thinking-subsection">
+                    <h3><a href="#" onclick="showVirtualMakerSpaces()">Virtual Maker Spaces</a></h3>
+                    <p>Explore our virtual environments for creating, experimenting, and collaborating on projects.</p>
+                </div>
+                <button onclick="showGrades('education-levels')">Back to Home</button>
+            `;
+            document.querySelector('main').appendChild(designThinkingSection);
+            document.getElementById('design-thinking-section').style.display = 'block';
+        }
+
+        function showInspireSection() {
+            hideAllSections();
+            const inspireSection = document.createElement('div');
+            inspireSection.id = 'inspire-section';
+            inspireSection.innerHTML = `
+                <h2>Inspire Innovate Implement</h2>
+                <p>Welcome to a world of inspiration, innovation, and implementation!</p>
+                <div class="inspire-buttons">
+                    <button onclick="showInspireContent('Ideathon')">Ideathon</button>
+                    <button onclick="showInspireContent('Hackathon')">Hackathon</button>
+                    <button onclick="showInspireContent('Give Away')">Give Away</button>
+                </div>
+                <div id="inspire-content"></div>
+                <button onclick="showDesignThinkingSection()">Back to Design Thinking</button>
+            `;
+            document.querySelector('main').appendChild(inspireSection);
+            document.getElementById('inspire-section').style.display = 'block';
+        }
+
+        function showInspireContent(type) {
+            const contentDiv = document.getElementById('inspire-content');
+            let content = '';
+            switch(type) {
+                case 'Ideathon':
+                    content = `
+                        <h3>Ideathon</h3>
+                        <p>Join our Ideathon and unleash your creativity! Share your innovative ideas and collaborate with others to solve real-world problems.</p>
+                        <button onclick="showRegistrationForm('Ideathon')">Participate</button>
+                    `;
+                    break;
+                case 'Hackathon':
+                    content = `
+                        <h3>Hackathon</h3>
+                        <p>Put your coding skills to the test in our Hackathon! Build amazing projects and compete with other talented developers.</p>
+                        <button onclick="showRegistrationForm('Hackathon')">Participate</button>
+                    `;
+                    break;
+                case 'Give Away':
+                    content = `
+                        <h3>Give Away</h3>
+                        <p>Contribute to our community by participating in our Give Away program. Share your knowledge, resources, or time to make a difference.</p>
+                        <button onclick="showRegistrationForm('Give Away')">Participate</button>
+                    `;
+                    break;
+            }
+            contentDiv.innerHTML = content;
+        }
+
+        function showRegistrationForm(eventType) {
+            const contentDiv = document.getElementById('inspire-content');
+            let classSelection = `
+                <select id="class" required>
+                    <option value="">Select your class</option>
+                    <option value="6th">6th Grade</option>
+                    <option value="7th">7th Grade</option>
+                    <option value="8th">8th Grade</option>
+                    <option value="9th">9th Grade</option>
+                    <option value="10th">10th Grade</option>
+                    <option value="11th">11th Grade</option>
+                    <option value="12th">12th Grade</option>
+                </select><br>
+            `;
+
+            contentDiv.innerHTML = `
+                <h3>Register for ${eventType}</h3>
+                <form id="registration-form">
+                    <input type="text" id="name" placeholder="Full Name" required><br>
+                    <input type="email" id="email" placeholder="Email" required><br>
+                    <input type="tel" id="phone" placeholder="Phone Number" required><br>
+                    ${classSelection}
+                    <textarea id="motivation" placeholder="Why do you want to participate?" required></textarea><br>
+                    <button type="submit">Register</button>
+                </form>
+                <div id="event-overview">
+                    <h4>${eventType} Overview</h4>
+                    <p>${getEventOverview(eventType)}</p>
+                </div>
+            `;
+
+            document.getElementById('registration-form').addEventListener('submit', function(e) {
+                e.preventDefault();
+                const name = document.getElementById('name').value;
+                const classGrade = document.getElementById('class').value;
+                registerParticipant(name, eventType, classGrade);
+            });
+        }
+
+        function getEventOverview(eventType) {
+            switch(eventType) {
+                case 'Ideathon':
+                    return "Our Ideathon is a 48-hour event where participants brainstorm and develop innovative solutions to real-world problems. You'll work in teams, receive mentorship, and have the chance to win exciting prizes!";
+                case 'Hackathon':
+                    return "The Hackathon is an intense coding competition where developers, designers, and innovators come together to build functional prototypes in just 24 hours. Showcase your skills, learn from experts, and compete for amazing rewards!";
+                case 'Give Away':
+                    return "Our Give Away program is a community-driven initiative where participants contribute their skills, knowledge, or resources to help those in need. It's a great opportunity to make a positive impact and connect with like-minded individuals!";
+                default:
+                    return "";
+            }
+        }
+
+        function registerParticipant(name, eventType, classGrade) {
+            const contentDiv = document.getElementById('inspire-content');
+            contentDiv.innerHTML = `
+                <h3>Registration Successful</h3>
+                <p>${name} has been successfully registered for the ${eventType}!</p>
+                <p>Class: ${classGrade}</p>
+                <p>Thank you for your participation. We'll send further details to your registered email address.</p>
+            `;
+        }
+
+        function showInteractiveWorkshop() {
+            hideAllSections();
+            const workshopSection = document.createElement('div');
+            workshopSection.id = 'interactive-workshop-section';
+            workshopSection.innerHTML = `
+                <h2>Interactive Workshop</h2>
+                <p>Welcome to our Interactive Design Thinking Workshops!</p>
+                <ul>
+                    <li>Introduction to Design Thinking</li>
+                    <li>Empathy and User Research</li>
+                    <li>Ideation Techniques</li>
+                    <li>Prototyping and Testing</li>
+                </ul>
+                <h3>Register for a Workshop</h3>
+                <form id="workshop-registration-form">
+                    <input type="text" id="workshop-name" placeholder="Your Name" required><br>
+                    <input type="email" id="workshop-email" placeholder="Your Email" required><br>
+                    <input type="tel" id="workshop-phone" placeholder="Your Phone Number" required><br>
+                    <select id="workshop-class" required>
+                        <option value="">Select your class</option>
+                        <option value="6th">6th Grade</option>
+                        <option value="7th">7th Grade</option>
+                        <option value="8th">8th Grade</option>
+                        <option value="9th">9th Grade</option>
+                        <option value="10th">10th Grade</option>
+                        <option value="11th">11th Grade</option>
+                        <option value="12th">12th Grade</option>
+                    </select><br>
+                    <button type="submit">Register</button>
+                </form>
+                <div id="registration-message"></div>
+                <button onclick="showDesignThinkingSection()">Back to Design Thinking</button>
+            `;
+            document.querySelector('main').appendChild(workshopSection);
+            document.getElementById('interactive-workshop-section').style.display = 'block';
+
+            document.getElementById('workshop-registration-form').addEventListener('submit', function(e) {
+                e.preventDefault();
+                registerForWorkshop();
+            });
+        }
+
+        function registerForWorkshop() {
+            const name = document.getElementById('workshop-name').value;
+            const email = document.getElementById('workshop-email').value;
+            const phone = document.getElementById('workshop-phone').value;
+            const classGrade = document.getElementById('workshop-class').value;
+
+            // Here you would typically send this data to a server
+            // For now, we'll just display a success message
+            const messageDiv = document.getElementById('registration-message');
+            messageDiv.innerHTML = `
+                <h3>Successfully Registered!</h3>
+                <p>Thank you for registering, ${name}!</p>
+                <p>We will send workshop links and updates to your email: ${email}</p>
+            `;
+
+            // Clear the form
+            document.getElementById('workshop-registration-form').reset();
+        }
+
+        function showVirtualMakerSpaces() {
+            hideAllSections();
+            const makerSpacesSection = document.createElement('div');
+            makerSpacesSection.id = 'virtual-maker-spaces-section';
+            makerSpacesSection.innerHTML = `
+                <h2>Virtual Maker Spaces</h2>
+                <p>Explore our virtual environments for creating and collaborating!</p>
+                <ul>
+                    <li>3D Design Studio</li>
+                    <li>Digital Art Workshop</li>
+                    <li>Coding Lab</li>
+                    <li>Robotics Simulator</li>
+                </ul>
+                <button onclick="showRegistrationForm('Virtual Maker Space')">Access Virtual Spaces</button>
+                <button onclick="showDesignThinkingSection()">Back to Design Thinking</button>
+            `;
+            document.querySelector('main').appendChild(makerSpacesSection);
+            document.getElementById('virtual-maker-spaces-section').style.display = 'block';
+        }
+
+        // Add this new function to handle form submission
+        function handleContactFormSubmission(event) {
+            event.preventDefault();
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+
+            // In a real application, you would send this data to a server
+            console.log('Form submitted:', { name, email, message });
+            alert('Thank you for your message! We will get back to you soon.');
+
+            // Clear the form
+            document.getElementById('contact-form').reset();
+        }
+
+        // Add this line at the end of your existing script
+        document.getElementById('contact-form').addEventListener('submit', handleContactFormSubmission);
+    </script>
+</body>
+</html>
